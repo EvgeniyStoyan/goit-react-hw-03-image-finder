@@ -6,7 +6,7 @@ export default function ImageGalleryItem({ images, onClickImage }) {
       <img
         src={image.webformatURL}
         alt={image.tags}
-        className={s.ImageGalleryItem - image}
+        className={s.ImageGalleryItemImage}
         onClick={() => onClickImage(image)}
       />
     </li>
