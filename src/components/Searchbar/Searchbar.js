@@ -17,6 +17,7 @@ export default class Searchbar extends Component {
 
     if (this.state.searchQuery.trim() === '') {
       toast.warning('Please enter your search query !');
+      return;
     }
 
     this.props.onSubmit(this.state.searchQuery);

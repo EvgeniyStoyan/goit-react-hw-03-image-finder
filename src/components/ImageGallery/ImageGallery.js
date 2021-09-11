@@ -17,7 +17,6 @@ const Status = {
 export default class ImageGallery extends Component {
   state = {
     images: null,
-    error: null,
     page: 1,
     status: Status.IDLE,
   };
@@ -94,7 +93,7 @@ export default class ImageGallery extends Component {
 
     if (status === 'download') {
       return (
-        <div>
+        <div className={s.GalleryContainer}>
           <ul className={s.ImageGallery}>
             <ImageGalleryItem
               images={images}
@@ -112,7 +111,7 @@ export default class ImageGallery extends Component {
 
     if (status === 'resolved') {
       return (
-        <div>
+        <div className={s.GalleryContainer}>
           <ul className={s.ImageGallery}>
             <ImageGalleryItem
               images={images}
