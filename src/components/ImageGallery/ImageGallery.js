@@ -47,7 +47,7 @@ export default class ImageGallery extends Component {
       }, 1000);
     }
 
-    if (prevState.page !== this.state.page) {
+    if (prevState.page !== this.state.page && this.state.page > 1) {
       this.setState({ status: Status.DOWNLOAD });
       setTimeout(() => {
         fetch(
